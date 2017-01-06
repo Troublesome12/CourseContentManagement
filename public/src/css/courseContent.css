@@ -1,0 +1,78 @@
+body
+{
+	background-color: #ECEFF4;
+	overflow-x: hidden;
+}
+
+.page-title
+{
+	position: relative;
+	left: 50px;
+}
+
+.search-bar
+{
+	position: relative;
+	right: 100px;
+	bottom: 50px;
+}
+
+.btn-search
+{
+	position: relative;
+	right: 5px;
+	border-radius: 0px;
+}
+
+#item
+{
+	font-size: 20px;
+}
+
+.well-custom
+{
+	background-color: white;
+    margin: auto;
+    box-shadow: 2px 3px 5px #999;
+    border-radius: 0px;
+    margin-top: 5px;
+   	color: #28c3ab;
+}
+.default-color{
+	color: #28c3ab;
+}
+
+#dialog
+{
+	margin-left: 15px;
+}
+
+.content-name
+{
+	color: #1B7084;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.credential
+{
+	font-size: 15px;
+	color: #1B7084;
+}
+
+.content
+{
+	font-size: 18px;
+	color: #1B7084;
+}
+
+.rating
+{
+	color: #1B7084;
+}
+
+.link-item
+{
+	color: #1B7084;
+	text-decoration: none;
+}
