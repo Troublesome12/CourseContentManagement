@@ -2,7 +2,12 @@
 
 @section('title', "$file->title")
 
+@section('navbar')
+    @include('partials.navbar')
+@endsection
+
 @section('content')
+	<div class="file-container"></div>
 	@if($file->type == 1)	{{-- image file --}}
     <center>
     <img src="{{ URL::to('src/files/'.$file->file_path) }}" class="img img-responsive">

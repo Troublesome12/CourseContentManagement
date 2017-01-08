@@ -2,8 +2,12 @@
 
 @section('title', "$course->course_name")
 
+@section('navbar')
+    @include('partials.navbar')
+@endsection
+
 @section('content')
-    <div class="container">
+    <div class="container file-container">
         <div class="col-md-10 col-md-offset-1">
             <div class="row title">
                 <div class="col-md-10">

@@ -6,6 +6,10 @@
     {{-- <link rel="stylesheet" href="{{ URL::to('src/css/w3css.css') }}"> --}}
 @endpush
 
+@section('navbar')
+    @include('partials.navbar')
+@endsection
+
 @section('content')
 
     <div class="container-fluid">

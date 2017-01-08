@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="{{ URL::to('src/css/parsley.css') }}">
 @endpush
 
+@section('navbar')
+    @include('partials.navbar')
+@endsection
+
 @section('content')
-    <div class="container">
+    <div class="container file-container">
     	<div class="col-md-8 col-md-offset-2 title">
             <h1 class="text-center">{{ $course->course_name }}</h1>
             <hr>

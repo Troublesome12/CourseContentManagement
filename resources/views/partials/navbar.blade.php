@@ -1,4 +1,4 @@
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top {{ ( Request::is('/') || Request::is('/login') ) ? '' : 'top-nav-collapse' }}" role="navigation">
     <div class="container">
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -11,16 +11,18 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse page-scroll">
             <ul class="nav navbar-nav">
-                <li><a href="#intro">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#cse">Computer Science and Engineering</a></li>
-                        <li><a href="#eee">Electrical and Electronic Engineering</a></li>
-                        <li><a href="#bba">Bachelor of Business Administration</a></li>
-                    </ul>
-                </li>   
-                <li><a href="#contact">Contact Us</a></li>
+                @if(Request::is('/'))
+                    <li><a href="#intro">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#cse">Computer Science and Engineering</a></li>
+                            <li><a href="#eee">Electrical and Electronic Engineering</a></li>
+                            <li><a href="#bba">Bachelor of Business Administration</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="#contact">Contact Us</a></li>
+                @endif
                 @if (Auth::check())
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
