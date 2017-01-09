@@ -11,8 +11,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse page-scroll">
             <ul class="nav navbar-nav">
+                <li><a href="{{ route('index') }}/#intro">Home</a></li>
                 @if(Request::is('/'))
-                    <li><a href="#intro">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <b class="caret"></b></a>
                         <ul class="dropdown-menu">
