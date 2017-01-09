@@ -11,12 +11,12 @@
 @endsection
 
 @section('content')
-    <div class="container file-container">
+    <div class="container">
     	<div class="col-md-8 col-md-offset-2 title">
             <h1 class="text-center">{{ $file->course->course_name }}</h1>
             <hr>
             <h3 class="text-center">Edit File</h3>
-    		<form action="{{ route('file.update', $file->id) }}" method="post" enctype="multipart/form-data" class="title" data-parsley-validate>
+    		<form action="{{ route('file.update', $file->id) }}" method="post" enctype="multipart/form-data" data-parsley-validate>
     			{{ csrf_field() }}
     			<div class="form-group">
     				<label>Title</label>
@@ -42,3 +42,7 @@
 @push('js')
     <script src="{{ URL::to('src/js/parsley.min.js') }}"></script>
 @endpush
+
+@section('footer')
+    @include('partials.footer')
+@endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Course;
 use App\File;
+use PDF;
 
 class PageController extends Controller{
     
@@ -23,5 +24,12 @@ class PageController extends Controller{
         $id = Auth::user()->id;
         $files = File::where('user_id', '=', $id)->paginate(10);  
         return view('pages.fileList')->withFiles($files);
+    }
+
+    public function getPdf() {
+        $id = Auth::user()->id;
+        $files = File::where('user_id', '=', $id)->get();  
+        $pdf = PDF::loadView('pages.pdf', ['files' => $files]);
+        return $pdf->stream('user.pdf');
     }
 }

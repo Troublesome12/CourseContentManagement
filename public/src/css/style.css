@@ -687,7 +687,8 @@ form#contact-form textarea:focus {
 
 footer {
     text-align: center;
-    padding: 50px 0;
+    margin-top: 20px;
+    padding: 20px 0;
     color: #f8f8f8;
 }
 
@@ -947,7 +948,7 @@ Parallax
 }
 
 .title {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 iframe {
@@ -1011,4 +1012,29 @@ iframe {
     margin: 20px;
     padding : 10px;
     border  : 1px solid #cccccc;
+}
+
+.file-container {
+    margin-top: 80px;
+}
+
+.file-container>h3 {
+    text-align: center;
+}
+
+.text-muted {
+    color: #CCC;
+}
+
+.text-muted>a {
+    color: #3366BB;
+}
+
+.text-muted>a:hover{
+    color: #337a6f;
+    text-decoration: underline; 
+}
+
+.top-margin {
+    margin-top: 20px;
 }

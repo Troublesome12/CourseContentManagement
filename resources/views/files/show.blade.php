@@ -7,16 +7,20 @@
 @endsection
 
 @section('content')
-	<div class="file-container"></div>
-	@if($file->type == 1)	{{-- image file --}}
-    <center>
-    <img src="{{ URL::to('src/files/'.$file->file_path) }}" class="img img-responsive">
-	</center>
-	@else 		{{-- pdf file --}}		
-	<div class="embed-responsive embed-responsive-4by3">
-        <iframe src="{{ URL::to('src/files/'.$file->file_path)."#zoom=140" }}" class="embed-responsive-item"></iframe>
-    </div>
-	@endif
+	<div class="file-container">
+		<h3>{{ $file->title }}</h3>
+		<hr>
+		@if($file->type == 1)	{{-- image file --}}
+	    <center>
+	    	<img src="{{ URL::to('src/files/'.$file->file_path) }}" class="img img-responsive">
+		</center>
+		@else 		{{-- pdf file --}}		
+		<div class="embed-responsive embed-responsive-4by3">
+	        <iframe src="{{ URL::to('src/files/'.$file->file_path)."#zoom=140" }}" class="embed-responsive-item"></iframe>
+	    </div>
+		@endif
+	</div>
+	<hr>
     <div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h3 class="comment title">
@@ -62,4 +66,8 @@
 		</div>
 	</div>
 	@endif
+@endsection
+
+@section('footer')
+    @include('partials.footer')
 @endsection

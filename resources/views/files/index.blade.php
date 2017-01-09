@@ -7,14 +7,14 @@
 @endsection
 
 @section('content')
-    <div class="container file-container">
+    <div class="container">
         <div class="col-md-10 col-md-offset-1">
             <div class="row title">
                 <div class="col-md-10">
                     <h1>{{ $course->course_name }}</h1>
                 </div>
                 <div class="col-md-2">
-                    <a class="btn btn-primary pull-right" href="{{ route('file.create', $course->id) }}">Add</a>
+                    <a class="btn btn-primary pull-right top-margin" href="{{ route('file.create', $course->id) }}">Add</a>
                 </div>  
             </div>
             <hr>
@@ -48,4 +48,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('footer')
+    @include('partials.footer')
 @endsection

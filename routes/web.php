@@ -81,3 +81,15 @@ Route::post('comment/{id}/store', [
     'as' => 'comment.store',
     'middleware' => 'auth'
 ]);
+
+//Routes for exporting PDF
+Route::get('pdf', [
+  'uses' => 'PageController@getPdf',
+  'as' => 'pdf'
+]);
+
+//API
+Route::get('/api/files', 'Api\ApiController@index');
+Route::get('/api/files/{id}', 'Api\ApiController@show');
+Route::get('/api/files/{id}/download', 'Api\ApiController@download');
+//END

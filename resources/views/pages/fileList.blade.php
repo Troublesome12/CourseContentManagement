@@ -9,10 +9,16 @@
 @section('content')
     <div class="container">
         <div class="col-md-10 col-md-offset-1">
-            <div class="title">
-                <h1>File List <span>by {{ Auth::user()->name }}</span></h1>
-                <hr>
+            <div class="row title">
+                <div class="col-md-10">
+                    <h1>File List <span>by {{ Auth::user()->name }}</span></h1>
+                </div>
+                <div class="col-md-2">
+                    <a class="btn btn-primary pull-right top-margin" href="{{ route('pdf') }}">Export</a>
+                </div>
             </div>
+            <hr>
+
             @foreach ($files as $file)
                 <div class="well well-lg">
                     <div class="row">
@@ -40,4 +46,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('footer')
+    @include('partials.footer')
 @endsection
